@@ -78,7 +78,6 @@ for i in range(len(unique_targets)):
     ans.append(st.text_input(unique_targets[i]))
     fnl=fnl.replace(unique_targets[i],ans[i])
 st.markdown("---")
-
 wana_print = st.sidebar.checkbox("wana print?")
 
 if (wana_print):
@@ -89,6 +88,7 @@ if (wana_print):
 save = st.sidebar.checkbox("Do You want to save this file")
 st.sidebar.markdown("---")
 if (save): 
+    
     field = st.selectbox("field :",("","Web Dev","Data Science","other_files"))
     if field == "Web Dev":
         select_to_save = st.selectbox("Webdev Formats :",web_dev_tuple)
@@ -96,6 +96,7 @@ if (save):
         select_to_save = st.selectbox("Data Science Format :",data_science_tuple)
     elif field == "text_files":
         select_to_save = st.selectbox("other text files: ",other_folder_tuple)
+
             
     file_count=len(text_files_list)
     filename="sample_"+str(file_count)
