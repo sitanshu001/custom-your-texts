@@ -1,22 +1,22 @@
 import streamlit as st
 import re
-import os
+from pathlib import Path
 
-cur_folder = os.getcwd()
-text_folder_path = os.path.join(cur_folder,"text_files")
-text_files_list = os.listdir(text_folder_path)
+cur_folder = Path.cwd()
+text_folder_path = Path(cur_folder/"text_files")
+text_files_list = Path.iterdir(text_folder_path)
 text_files_tuple = ("",)+tuple(text_files_list)
 
-data_science_folder_path = os.path.join(text_folder_path,"Data Science")
+data_science_folder_path = Path(text_folder_path/"Data Science")
 data_science_list = os.listdir(data_science_folder_path)
 data_science_tuple=("",)+tuple(data_science_list)
 
-web_dev_folder_path = os.path.join(text_folder_path,"Devlopment Website")
-web_dev_list = os.listdir(web_dev_folder_path)
+web_dev_folder_path = Path(text_folder_path/"Devlopment Website")
+web_dev_list = Path.iterdir(web_dev_folder_path)
 web_dev_tuple=("",)+tuple(web_dev_list)
 
-other_folder_path = os.path.join(text_folder_path,"other folders")
-other_folder_list = os.listdir(other_folder_path)
+other_folder_path = Path(text_folder_path/"other folders")
+other_folder_list = Path.iterdir(other_folder_path)
 other_folder_tuple=("",)+tuple(other_folder_list)
 
 ltr = ""
