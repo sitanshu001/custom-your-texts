@@ -8,7 +8,7 @@ text_files_list = Path.iterdir(text_folder_path)
 text_files_tuple = ("",)+tuple(text_files_list)
 
 data_science_folder_path = Path(text_folder_path/"Data Science")
-data_science_list = os.listdir(data_science_folder_path)
+data_science_list = Path.iterdir(data_science_folder_path)
 data_science_tuple=("",)+tuple(data_science_list)
 
 web_dev_folder_path = Path(text_folder_path/"Devlopment Website")
