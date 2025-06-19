@@ -2,6 +2,7 @@ import streamlit as st
 import re
 from pathlib import Path
 import pandas as pd
+
 cur_folder = Path.cwd()
 text_folder_path = Path(cur_folder/"text_files/")
 text_files_list = [f.name for f in text_folder_path.iterdir()]
@@ -35,7 +36,8 @@ file_path=Path()
 st.sidebar.subheader("Instruction")
 st.sidebar.markdown("""
                     - The variable portion should be inside square brackets '[' & ']' to edit those portion.
-                    - """)
+                    - ignore the error and work on progress on save function 
+                    ---""")
 st.markdown("---")
 st.sidebar.markdown("---")
 
